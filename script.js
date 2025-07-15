@@ -20,6 +20,11 @@ for (let i in countryList){
     }
 }
 
+let form=document.querySelector('form')
+form.addEventListener('submit',(event)=>{
+    event.preventDefault();
+})
+
 select.forEach((menu) =>{
     menu.addEventListener('change',()=>{
         option=menu.options[menu.selectedIndex]
