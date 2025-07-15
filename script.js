@@ -53,7 +53,13 @@ btn.addEventListener('click',async ()=>{
             if(rate===undefined){
                 result.innerText=`${to} is not available with ${from}.. Try some different other than ${to}`
             }else{
-                result.innerText=`${amount} ${from} = ${rate*amount} ${to}`}
+                if(!(rate*amount)){
+                    result.innerText=`Please enter only numbers in amount`
+                }else{
+                    console.log(rate*amount)
+                    result.innerText=`${amount} ${from} = ${rate*amount} ${to}`
+                }
+            }
         }        
     }    
 });
