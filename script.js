@@ -43,14 +43,18 @@ btn.addEventListener('click',async ()=>{
     if(from===to){
         result.innerText=amount
     }else{
+        
         let response=await fetch('https://open.er-api.com/v6/latest/'+from)
         console.log(response)
-        let data=await response.json()
-        console.log(data)
-        let rate=data.rates[to] //data mein bahut sare objects hai usme se rates wale object mein from wali currency ke sare rates given hai toh usme se to wali currency ka rate nikalo
-        console.log(rate,typeof rate)
-        result.innerText=`${amount} ${from} = ${rate*amount} ${to}`
-    }
-    
-
+        data=await response.json()
+        if(data.result==='error'){
+            result.innerText=`${from} is not available.. Try some different other than ${from}`
+        }else{
+            let rate=data.rates[to] //data mein bahut sare objects hai usme se rates wale object mein from wali currency ke sare rates given hai toh usme se to wali currency ka rate nikalo
+            if(rate===undefined){
+                result.innerText=`${to} is not available with ${from}.. Try some different other than ${to}`
+            }else{
+                result.innerText=`${amount} ${from} = ${rate*amount} ${to}`}
+        }        
+    }    
 });
