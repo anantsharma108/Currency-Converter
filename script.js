@@ -45,7 +45,6 @@ btn.addEventListener('click',async ()=>{
     }else{
         
         let response=await fetch('https://open.er-api.com/v6/latest/'+from)
-        console.log(response)
         data=await response.json()
         if(data.result==='error'){
             result.innerText=`${from} is not available.. Try some different other than ${from}`
