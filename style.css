@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color:rgb(38, 209, 32);
+  
+}
+
+#heading{
+    height: 10%;
+    width: 100%;
+    background-color: chocolate;
+    color: rgb(43, 41, 41);
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form{
+    width: 100%;
+    margin:1x;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+form{
+    text-align: center;
+    margin:10px;
+    background-color: aqua;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+}
+#enter-amount{
+    margin-top: 20px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: x-large;
+}
+
+#amount{
+    height: 8%;
+    width: 60%;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.box{
+    margin: 20px;
+    background-color: rgb(128, 153, 199);
+    border-radius: 10px;
+    width: 200px;
+    height: 120px;
+    font-size:larger;
+    margin-left: 150px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select{
+    width: 60px;
+    background-color: rgb(219, 219, 219);
+}
+
+#btn{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border-style: solid;
+    color: white;
+    font-weight: 900;
+    background-color: rgb(240, 14, 14);
+    margin-left: 630px;
+}
+
+#btn:hover{
+    background-color: rgb(214, 28, 28);
+    color: aliceblue;
+    border-style:inset;
+}
+
+#result{
+    text-align: center;
+    margin-top: 35px;
+}
+#result h2{
+    display: inline;
+    text-align: center;
+    background-color: rgb(208, 255, 0);
+    border-radius: 5px;
+    padding: 10px;
+}
